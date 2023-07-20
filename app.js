@@ -11,7 +11,7 @@ app.use(express.json());
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Welcome to Bookmarks App");
+  res.send("Welcome to the Bookmarks App");
 });
 
 // Bookmarks ROUTES
