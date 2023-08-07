@@ -11,14 +11,17 @@ const cn = {
 
 const db = pgp(cn);
 
+console.log("Preparing to connect...")
 db.connect()
-  .then((obj) => {
+.then((obj) => {
+    console.log("Connecting...")
     // Can check the server version here (pg-promise v10.1.0+):
     const serverVersion = obj.client.serverVersion;
-    console.log("postgres connection established");
+    console.log("Postgres connection established");
     obj.done(); // success, release the connection;
   })
   .catch((error) => {
+    console.log("Connection failed.")
     console.log("ERROR:", error.message || error);
   });
 
