@@ -3,17 +3,17 @@ const db = require("../db/dbConfig.js");
 // ALL Bookmarks
 const getAllBookmarks = async () => {
     console.log("Running getAllBookmarks function...")
-    try {
+    // try {
       console.log("Querying...")
       const allBookmarks = await db.any("SELECT * FROM bookmarks");
       console.log("allBookmarks:")
       console.log(allBookmarks)
       return allBookmarks;
-    } catch (error) {
-      console.log("Encountered error:")
-      console.log(error)
-      return error;
-    }
+    // } catch (error) {
+    //   console.log("Encountered error:")
+    //   console.log(error)
+    //   return error;
+    // }
 };
 
 // ONE Bookmark
