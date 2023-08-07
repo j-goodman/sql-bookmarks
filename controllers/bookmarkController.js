@@ -15,6 +15,7 @@ bookmarks.get("/", async (req, res) => {
     if (allBookmarks[0]) {
       res.status(200).json(allBookmarks);
     } else {
+      console.log("Sending error response...")
       res.status(500).json({ error: "server error" });
     }
 });
